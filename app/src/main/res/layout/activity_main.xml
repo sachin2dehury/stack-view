@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -12,26 +11,27 @@
         android:id="@+id/container"
         tools:context=".home.views.MainActivity">
 
-    <ProgressBar
-            android:theme="@style/AppTheme"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:id="@+id/progressBar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:indeterminate="false"
-            android:progress="0"
-            android:max="100"/>
+    <!--    <ProgressBar-->
+    <!--            android:theme="@style/AppTheme"-->
+    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!--            android:id="@+id/progressBar"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintRight_toRightOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            android:indeterminate="false"-->
+    <!--            android:progress="0"-->
+    <!--            android:max="100"/>-->
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/placeholder"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -41,33 +41,39 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/imageView"
-                app:layout_constraintVertical_bias="0.25"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/imageView"
+                app:layout_constraintVertical_bias="0.25" />
 
-        <android.support.v7.widget.AppCompatTextView
-                android:text="All Caught Up!"
+        <androidx.appcompat.widget.AppCompatTextView
+                android:text="End here!"
                 app:fontFamily="@font/raleway_medium"
                 android:textColor="#ffffff"
                 android:textSize="19sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/imageView"
-                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="48dp"
-                android:layout_marginBottom="24dp"/>
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="24dp" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.yuyakaido.android.cardstackview.CardStackView
             android:id="@+id/cards"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="500dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintVertical_bias="0.40"/>
+            app:layout_constraintVertical_bias="0.40" />
 
     <ImageButton
             android:id="@+id/previousCard"
@@ -79,19 +85,29 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp" />
 
 
-    <android.support.design.widget.FloatingActionButton
+    <ImageButton
             android:id="@+id/restack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme"
-            android:src="@drawable/ic_action_name"
+            style="?attr/borderlessButtonStyle"
+            android:rotation="180"
+            android:src="@drawable/ic_previous_button"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/previousCard"
+            app:layout_constraintBottom_toBottomOf="@id/previousCard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
