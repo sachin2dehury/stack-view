@@ -50,6 +50,8 @@ dependencies {
 
 //    implementation 'com.yuyakaido.android:card-stack-view:2.1.0'
 
+//    implementation "com.littlemango:stacklayoutmanager:1.0.5"
+
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     // ViewModel
 }

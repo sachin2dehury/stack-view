@@ -169,7 +169,6 @@ public class CardStackLayoutManager
     }
 
     private void update(RecyclerView.Recycler recycler) {
-        System.out.println("SAchin Update Layout Manager");
         state.width = getWidth();
         state.height = getHeight();
 

@@ -11,18 +11,14 @@
         android:id="@+id/container"
         tools:context=".home.views.MainActivity">
 
-    <!--    <ProgressBar-->
-    <!--            android:theme="@style/AppTheme"-->
-    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
-    <!--            android:id="@+id/progressBar"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--            app:layout_constraintRight_toRightOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent"-->
-    <!--            android:indeterminate="false"-->
-    <!--            android:progress="0"-->
-    <!--            android:max="100"/>-->
+    <ProgressBar
+            android:theme="@style/AppTheme"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminate="true" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/placeholder"
